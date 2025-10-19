@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heart, Calendar, Sparkles, Music } from "lucide-react";
+import { Heart, Calendar, Sparkles, Music, MapPin, Clock } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -12,58 +12,23 @@ import heroImage from "@/assets/wedding-hero.jpg";
 
 const scheduleEvents = [
   {
-    date: "19 OCT",
-    day: "Sunday",
-    title: "Haldi bida for Bride",
-    description: "Traditional turmeric ceremony for the bride",
-    icon: Sparkles,
-  },
-  {
-    date: "20 OCT",
-    day: "Monday",
-    title: "Allah nami Khana",
-    description: "Lunch - Monday",
-    icon: Heart,
-  },
-  {
-    date: "21 OCT",
-    day: "Tuesday",
-    title: "Biya",
-    description: "Morning ceremony",
-    icon: Calendar,
-  },
-  {
-    date: "21 OCT",
-    day: "Tuesday",
-    title: "Badi Haldi",
-    description: "Evening celebration",
-    icon: Sparkles,
-  },
-  {
-    date: "22 OCT",
-    day: "Wednesday",
-    title: "Mehandi and Dance",
-    description: "Intricate henna art and musical evening",
+    date: "24 OCT",
+    day: "Friday",
+    title: "Haldi/Kuran khani",
+    description: "Dinner Night",
     icon: Music,
   },
   {
-    date: "23 OCT",
-    day: "Thursday",
-    title: "Wedding",
+    date: "26 OCT",
+    day: "Sunday",
+    title: "Wedding (Nikah)",
     description: "The sacred wedding ceremony",
     icon: Heart,
   },
   {
-    date: "24 OCT",
-    day: "Friday",
-    title: "PuranPoli (Haat baratni)",
-    description: "Traditional post-wedding celebration",
-    icon: Calendar,
-  },
-  {
-    date: "25 OCT",
-    day: "Saturday",
-    title: "Reception",
+    date: "28 OCT",
+    day: "Tuesday",
+    title: "Dawat-E-Walima",
     description: "Celebration dinner and festivities",
     icon: Sparkles,
   },
@@ -120,16 +85,16 @@ const Index = () => {
       {/* Main Content - Schedule */}
       {!showLoader && (
         <div className="animate-fade-in relative overflow-hidden">
-          {/* Floating Particles */}
+          {/* Reduced Particles for Performance */}
           <div className="fixed inset-0 pointer-events-none z-0">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-primary/30 rounded-full animate-float-particle"
                 style={{
                   left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 10}s`,
-                  animationDuration: `${15 + Math.random() * 10}s`
+                  animationDelay: `${i * 2}s`,
+                  animationDuration: `20s`
                 }}
               />
             ))}
@@ -144,17 +109,17 @@ const Index = () => {
               <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/5 rounded-full animate-pulse-slow" style={{animationDelay: '2s'}}></div>
             </div>
             
-            {/* Sparkle Effects */}
+            {/* Reduced Sparkles */}
             <div className="absolute inset-0 pointer-events-none">
-              {[...Array(8)].map((_, i) => (
+              {[...Array(3)].map((_, i) => (
                 <Sparkles
                   key={i}
                   className="absolute text-primary/20 animate-sparkle"
                   style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
-                    animationDelay: `${Math.random() * 3}s`,
-                    fontSize: `${12 + Math.random() * 8}px`
+                    left: `${30 + i * 20}%`,
+                    top: `${30 + i * 15}%`,
+                    animationDelay: `${i}s`,
+                    fontSize: `16px`
                   }}
                 />
               ))}
@@ -168,15 +133,118 @@ const Index = () => {
                 <Heart className="w-10 h-10 md:w-12 md:h-12 mx-auto text-primary animate-heartbeat relative z-10" fill="currentColor" />
               </div>
               <h1 className="font-playfair text-4xl md:text-7xl font-bold text-foreground mb-4 animate-text-reveal bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent bg-300% animate-gradient">
-                Aman Vijapure's Wedding
+                Aman's Wedding
               </h1>
               <p className="font-playfair text-xl md:text-3xl text-muted-foreground mb-6 animate-slide-up-delayed">
                 A Celebration of Love
               </p>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-foreground animate-fade-in-delayed">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/20 hover:scale-105 transition-all duration-500 animate-glow">
-                  <Calendar className="w-4 h-4 md:w-5 md:h-5 text-primary animate-spin-slow" />
-                  <span className="font-sans text-sm md:text-base">19 - 25 October 2024</span>
+                  <Calendar className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                  <span className="font-sans text-sm md:text-base">24 - 28 October 2025</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Invitation Card Section */}
+          <section className="py-16 px-4 relative overflow-hidden">
+
+
+            <div className="max-w-4xl mx-auto relative z-10">
+              <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 border-2 border-primary/20 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                
+                {/* Header */}
+                <div className="text-center mb-8">
+                  <h2 className="font-playfair text-3xl md:text-5xl text-foreground mb-2">Dawat-E-Nikah</h2>
+                  <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
+                </div>
+
+                {/* Nikah Details */}
+                <div className="text-center mb-8">
+                  <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">INSHA ALLAH NIKAH</h3>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Calendar className="w-5 h-5 text-primary" />
+                    <p className="text-foreground text-lg md:text-xl">Sunday, 26th October 2025</p>
+                  </div>
+                  <p className="text-muted-foreground text-base md:text-lg">(3 Jumada-Al-Awwal 1447 Hijri)</p>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <Clock className="w-5 h-5 text-primary" />
+                    <p className="text-foreground text-lg md:text-xl">at 11:30 a.m.</p>
+                  </div>
+                </div>
+
+                {/* Venue */}
+                <div className="text-center mb-8">
+                  <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">NIKAH VENUE</h3>
+                  <div className="flex items-start justify-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-1" />
+                    <div className="text-foreground text-center">
+                      <p className="text-base md:text-lg">Shivani Mangal Karyalay,</p>
+                      <p className="text-base md:text-lg">Pune-Bengaluru Highway,</p>
+                      <p className="text-base md:text-lg">Near KMT Petrol Pump, Shiroli (P)</p>
+                      <p className="text-base md:text-lg">Dist. Kolhapur. 416 122</p>
+                      <a href="https://maps.google.com/?q=Shivani+Mangal+Karyalay+Pune+Bengaluru+Highway+Shiroli+Kolhapur" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
+                        <MapPin className="w-4 h-4" />
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Couple Names */}
+                <div className="text-center mb-8">
+                  <div className="bg-card/50 rounded-2xl p-6 border border-primary/20">
+                    <p className="text-muted-foreground mb-3 text-base md:text-lg">S/o. Mr. Nisar Vijapure & Mrs. Nasim Vijapure</p>
+                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4">Aman</h2>
+                    <Heart className="w-6 h-6 mx-auto text-primary mb-3" fill="currentColor" />
+                    <p className="text-muted-foreground text-xl mb-3">With</p>
+                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4">Alfiya</h2>
+                    <p className="text-muted-foreground text-base md:text-lg">D/o. Mr. Altasir Khan & Mrs. Safiya Khan</p>
+                  </div>
+                </div>
+
+                {/* Walima */}
+                <div className="text-center mb-8">
+                  <h2 className="font-playfair text-3xl md:text-5xl text-foreground mb-2">Dawat-E-Walima</h2>
+                  <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
+                  <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">WALIMA RECEPTION</h3>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Calendar className="w-5 h-5 text-primary" />
+                    <p className="text-foreground text-lg md:text-xl">Tuesday, 28th October 2025</p>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <Clock className="w-5 h-5 text-primary" />
+                    <p className="text-foreground text-lg md:text-xl">7 p.m. Onwards</p>
+                  </div>
+                </div>
+
+                {/* Walima Venue */}
+                <div className="text-center mb-8">
+                  <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">WALIMA VENUE</h3>
+                  <div className="flex items-start justify-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-1" />
+                    <div className="text-foreground text-center">
+                      <p className="text-base md:text-lg">Vrundavan Garden, OPP Bride Multiplex,</p>
+                      <p className="text-base md:text-lg">Bypass Road, Sangli. 416 416</p>
+                      <a href="https://maps.google.com/?q=Vrundavan+Garden+Bride+Multiplex+Bypass+Road+Sangli" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
+                        <MapPin className="w-4 h-4" />
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-full shadow-lg backdrop-blur-sm border-2 border-primary/20">
+                    <Heart className="w-5 h-5 text-primary" fill="currentColor" />
+                    <div className="text-center">
+                      <p className="text-muted-foreground italic text-base">With Best Compliments From</p>
+                      <p className="font-playfair text-xl text-foreground">Vijapure & Khan Family</p>
+                    </div>
+                    <Heart className="w-5 h-5 text-primary" fill="currentColor" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,40 +320,34 @@ const Index = () => {
                       return (
                         <TableRow
                           key={index}
-                          className="hover:bg-gradient-to-r hover:from-primary/5 hover:via-secondary/5 hover:to-accent/5 transition-all duration-500 group border-b border-border/50 transform hover:translate-x-2 hover:shadow-lg hover:shadow-primary/10 animate-slide-up opacity-0 relative overflow-hidden"
-                          style={{ 
-                            animationDelay: `${index * 0.15}s`,
-                            animationFillMode: 'forwards'
-                          }}
+                          className="hover:bg-primary/5 transition-colors duration-300 group border-b border-border/50"
                         >
-                          <TableCell className="font-sans font-semibold text-primary py-4 md:py-6 pl-4 md:pl-6 pr-0 -mr-4 relative">
-                            {/* Row Shimmer Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out pointer-events-none"></div>
+                          <TableCell className="font-sans font-semibold text-primary py-4 md:py-6 pl-4 md:pl-6">
                             <div className="flex items-center gap-2 md:gap-3">
-                              <Calendar className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
+                              <Calendar className="w-5 h-5 md:w-6 md:h-6" />
                               <div className="flex flex-col">
-                                <span className="text-sm md:text-lg font-bold">{event.date}</span>
-                                <span className="text-xs md:text-sm text-muted-foreground font-medium">{event.day}</span>
+                                <span className="text-base md:text-xl font-bold">{event.date}</span>
+                                <span className="text-sm md:text-base text-muted-foreground font-medium">{event.day}</span>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell className="py-4 md:py-6 pr-4 md:pr-6 pl-0 -ml-8">
-                            <div className="flex items-center gap-2 md:gap-4">
-                              <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                                <Icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
+                          <TableCell className="py-4 md:py-6 pr-4 md:pr-6">
+                            <div className="flex items-center gap-3 md:gap-4">
+                              <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                                <Icon className="w-5 h-5 md:w-7 md:h-7 text-white" />
                               </div>
                               <div className="flex flex-col">
-                                <span className="font-playfair text-sm md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                                <span className="font-playfair text-base md:text-2xl font-semibold text-foreground">
                                   {event.title}
                                 </span>
-                                <span className="text-xs md:hidden text-muted-foreground mt-1">
+                                <span className="text-sm md:hidden text-muted-foreground mt-1">
                                   {event.description}
                                 </span>
                               </div>
                             </div>
                           </TableCell>
                           <TableCell className="font-sans text-muted-foreground py-4 md:py-6 px-4 md:px-8 hidden sm:table-cell">
-                            <span className="text-sm md:text-base group-hover:text-foreground transition-colors duration-300">
+                            <span className="text-base md:text-lg">
                               {event.description}
                             </span>
                           </TableCell>
