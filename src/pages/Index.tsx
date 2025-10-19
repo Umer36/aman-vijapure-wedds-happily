@@ -29,7 +29,7 @@ const scheduleEvents = [
     date: "28 OCT",
     day: "Tuesday",
     title: "Dawat-E-Walima",
-    description: "Celebration dinner and festivities",
+    description: "Celebration dinner",
     icon: Sparkles,
   },
 ];
