@@ -149,6 +149,23 @@ const Index = () => {
 
           {/* Invitation Card Section */}
           <section className="py-16 px-4 relative overflow-hidden">
+            {/* Floating Hearts Background */}
+            <div className="absolute inset-0 pointer-events-none">
+              {[...Array(10)].map((_, i) => (
+                <Heart
+                  key={i}
+                  className={`absolute text-primary/15 animate-float-heart-${(i % 3) + 1}`}
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${100 + Math.random() * 20}%`,
+                    width: `${15 + Math.random() * 20}px`,
+                    height: `${15 + Math.random() * 20}px`,
+                    animationDelay: `${Math.random() * 10}s`
+                  }}
+                  fill="currentColor"
+                />
+              ))}
+            </div>
 
 
             <div className="max-w-4xl mx-auto relative z-10">
@@ -198,10 +215,10 @@ const Index = () => {
                 <div className="text-center mb-8">
                   <div className="bg-card/50 rounded-2xl p-6 border border-primary/20">
                     <p className="text-muted-foreground mb-3 text-base md:text-lg">S/o. Mr. Nisar Vijapure & Mrs. Nasim Vijapure</p>
-                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4">Aman</h2>
-                    <Heart className="w-6 h-6 mx-auto text-primary mb-3" fill="currentColor" />
+                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4 animate-pulse">Aman</h2>
+                    <Heart className="w-6 h-6 mx-auto text-primary mb-3 animate-heartbeat" fill="currentColor" />
                     <p className="text-muted-foreground text-xl mb-3">With</p>
-                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4">Alfiya</h2>
+                    <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4 animate-pulse" style={{animationDelay: '1s'}}>Alfiya</h2>
                     <p className="text-muted-foreground text-base md:text-lg">D/o. Mr. Altasir Khan & Mrs. Safiya Khan</p>
                   </div>
                 </div>
