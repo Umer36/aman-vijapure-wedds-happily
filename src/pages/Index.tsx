@@ -219,7 +219,7 @@ const Index = () => {
                     <Heart className="w-6 h-6 mx-auto text-primary mb-3 animate-heartbeat" fill="currentColor" />
                     <p className="text-muted-foreground text-xl mb-3">With</p>
                     <h2 className="font-playfair text-4xl md:text-6xl text-foreground mb-4 animate-pulse" style={{animationDelay: '1s'}}>Alfiya</h2>
-                    <p className="text-muted-foreground text-base md:text-lg">D/o. Mr. Altasir Khan & Mrs. Safiya Khan</p>
+                    <p className="text-muted-foreground text-base md:text-lg">D/o. Mr. Alnasir Khan & Mrs. Safiya Khan</p>
                   </div>
                 </div>
 
