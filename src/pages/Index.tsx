@@ -244,7 +244,7 @@ const Index = () => {
                   <div className="flex items-start justify-center gap-1">
                     <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div className="text-foreground text-center">
-                      <p className="text-base md:text-lg">Vrundavan Garden, OPP Bride Multiplex,</p>
+                      <p className="text-base md:text-lg">Vrundavan Garden, OPP New Pride Multiplex,</p>
                       <p className="text-base md:text-lg">Bypass Road, Sangli. 416 416</p>
                     </div>
                   </div>
