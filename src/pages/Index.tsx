@@ -177,18 +177,20 @@ const Index = () => {
                 {/* Venue */}
                 <div className="text-center mb-8">
                   <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">NIKAH VENUE</h3>
-                  <div className="flex items-start justify-center gap-3">
+                  <div className="flex items-start justify-center gap-1">
                     <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div className="text-foreground text-center">
                       <p className="text-base md:text-lg">Shivani Mangal Karyalay,</p>
                       <p className="text-base md:text-lg">Pune-Bengaluru Highway,</p>
                       <p className="text-base md:text-lg">Near KMT Petrol Pump, Shiroli (P)</p>
                       <p className="text-base md:text-lg">Dist. Kolhapur. 416 122</p>
-                      <a href="https://maps.google.com/?q=Shivani+Mangal+Karyalay+Pune+Bengaluru+Highway+Shiroli+Kolhapur" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
-                        <MapPin className="w-4 h-4" />
-                        Get Directions
-                      </a>
                     </div>
+                  </div>
+                  <div className="w-full flex justify-center mt-4">
+                    <a href="https://maps.google.com/?q=Shivani+Mangal+Karyalay+Pune+Bengaluru+Highway+Shiroli+Kolhapur" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
                   </div>
                 </div>
 
@@ -222,16 +224,18 @@ const Index = () => {
                 {/* Walima Venue */}
                 <div className="text-center mb-8">
                   <h3 className="font-playfair text-xl md:text-2xl text-foreground mb-4">WALIMA VENUE</h3>
-                  <div className="flex items-start justify-center gap-3">
+                  <div className="flex items-start justify-center gap-1">
                     <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div className="text-foreground text-center">
                       <p className="text-base md:text-lg">Vrundavan Garden, OPP Bride Multiplex,</p>
                       <p className="text-base md:text-lg">Bypass Road, Sangli. 416 416</p>
-                      <a href="https://maps.google.com/?q=Vrundavan+Garden+Bride+Multiplex+Bypass+Road+Sangli" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
-                        <MapPin className="w-4 h-4" />
-                        Get Directions
-                      </a>
                     </div>
+                  </div>
+                  <div className="w-full flex justify-center mt-4">
+                    <a href="https://maps.google.com/?q=Vrundavan+Garden+Bride+Multiplex+Bypass+Road+Sangli" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors">
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
                   </div>
                 </div>
 
@@ -300,16 +304,16 @@ const Index = () => {
               <div className="overflow-hidden rounded-2xl border-2 border-primary/20 shadow-2xl backdrop-blur-sm bg-card/80 animate-fade-in transform hover:scale-[1.02] transition-all duration-700 ease-out relative group">
                 {/* Animated Border */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-border-glow"></div>
-                <Table className="table-fixed w-full" style={{borderSpacing: '0'}}>
+                <Table className="w-full" style={{borderSpacing: '0'}}>
                   <TableHeader>
                     <TableRow className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 border-b-2 border-primary/20 transition-all duration-500">
-                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-2 md:py-4 px-4 md:px-4">
+                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-2 md:py-4 px-2 w-1/4">
                         Date
                       </TableHead>
-                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-4 md:py-6 px-4 md:px-8">
+                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-4 md:py-6 px-2 w-1/2">
                         Event
                       </TableHead>
-                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-4 md:py-6 px-4 md:px-8 hidden sm:table-cell">
+                      <TableHead className="font-playfair text-lg md:text-xl font-bold text-foreground py-4 md:py-6 px-2 w-1/4 hidden sm:table-cell">
                         Details
                       </TableHead>
                     </TableRow>
@@ -322,32 +326,32 @@ const Index = () => {
                           key={index}
                           className="hover:bg-primary/5 transition-colors duration-300 group border-b border-border/50"
                         >
-                          <TableCell className="font-sans font-semibold text-primary py-4 md:py-6 pl-4 md:pl-6">
-                            <div className="flex items-center gap-2 md:gap-3">
-                              <Calendar className="w-5 h-5 md:w-6 md:h-6" />
+                          <TableCell className="font-sans font-semibold text-primary py-4 md:py-6 px-2">
+                            <div className="flex items-center gap-1 md:gap-2">
+                              <Calendar className="w-4 h-4 md:w-5 md:h-5" />
                               <div className="flex flex-col">
-                                <span className="text-base md:text-xl font-bold">{event.date}</span>
-                                <span className="text-sm md:text-base text-muted-foreground font-medium">{event.day}</span>
+                                <span className="text-sm md:text-lg font-bold">{event.date}</span>
+                                <span className="text-xs md:text-sm text-muted-foreground font-medium">{event.day}</span>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell className="py-4 md:py-6 pr-4 md:pr-6">
-                            <div className="flex items-center gap-3 md:gap-4">
-                              <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                                <Icon className="w-5 h-5 md:w-7 md:h-7 text-white" />
+                          <TableCell className="py-4 md:py-6 px-2">
+                            <div className="flex items-center gap-2 md:gap-3">
+                              <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                                <Icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
                               </div>
                               <div className="flex flex-col">
-                                <span className="font-playfair text-base md:text-2xl font-semibold text-foreground">
+                                <span className="font-playfair text-sm md:text-xl font-semibold text-foreground">
                                   {event.title}
                                 </span>
-                                <span className="text-sm md:hidden text-muted-foreground mt-1">
+                                <span className="text-xs md:hidden text-muted-foreground mt-1">
                                   {event.description}
                                 </span>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell className="font-sans text-muted-foreground py-4 md:py-6 px-4 md:px-8 hidden sm:table-cell">
-                            <span className="text-base md:text-lg">
+                          <TableCell className="font-sans text-muted-foreground py-4 md:py-6 px-2 hidden sm:table-cell">
+                            <span className="text-sm md:text-base">
                               {event.description}
                             </span>
                           </TableCell>
